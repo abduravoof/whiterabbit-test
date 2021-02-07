@@ -1,0 +1,15 @@
+.main-banner{
+    .jumbotron{
+        background: url('../images/banner.jpg') center center no-repeat;
+        background-size: cover;
+        border-radius: 0px;
+        color: $theme-white-color;
+        h1{
+            color: $theme-white-color;
+        }
+    }
+    
+}
+main{
+    background: $theme-light-bg;
+}

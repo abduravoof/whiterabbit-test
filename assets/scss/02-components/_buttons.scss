@@ -1,0 +1,188 @@
+/** Default Button **/
+.btn{
+  line-height: 1.5rem;
+  font-size: 15px;
+  font-family: $heading-font;
+  padding:10px 15px 8px 15px;
+  &.btn-xl{
+    font-size: 16px;
+    padding:12px 25px 12px 25px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  &.btn-lg{
+    font-size: 16px;
+    padding:10px 25px 8px 25px;
+    font-weight: 500;
+  }
+  &.btn-sm{
+    font-size: 14px;
+    padding:6px 10px 4px 10px;
+  }
+  &.btn-flat{
+    border-radius: 0px;
+  }
+}
+/** Oval  Button **/
+.btn-oval{
+  border-radius: 30px;
+  &.btn-xl{
+    border-radius: 40px;
+  }
+  &.btn-lg{
+    border-radius: 35px;
+  }
+}
+/** Fab  Button **/
+.btn-fab{
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 0px;
+  line-height: 40px;
+  @include border-radius(50%);
+  @include box-shadow(0px, 0px, 30px, rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+}
+
+/** Button Colors **/
+@each $label, $color in $colors-list {
+  //Solid Buttons
+	.btn-#{$label} {
+    background-color:$color;
+    color: $theme-white-color;
+    border-color:mix(black, $color, 15%);
+		&:hover, &:active {
+			background-color:mix(black, $color, 15%);
+		}
+	}
+	a.btn-#{$label} {
+		background-color:$color;
+    color: $theme-white-color;
+    border-color:mix(black, $color, 15%);
+		&:hover, &:active {
+			background-color:mix(black, $color, 15%);
+		}
+  }
+  //Outline Buttons
+  .btn-outline-#{$label} {
+    background-color:transparent;
+    background-image: none;
+    color: $color;
+    border-color:$color;
+		&:hover, &:active {
+      background-color:$color;
+      color: $theme-white-color;
+		}
+  }
+  //Outline Links
+  a.btn-outline-#{$label} {
+    background-color:transparent;
+    background-image: none;
+    color: $color;
+    border-color:$color;
+		&:hover, &:active {
+      background-color:$color;
+      color: $theme-white-color;
+		}
+	}
+}
+
+/** Social Media Buttons **/
+@each $label, $color in $social-media-variables {
+	.btn-#{$label} {
+    background-color:$color;
+    color: $theme-white-color;
+    border-color:mix(black, $color, 15%);
+		&:hover, &:active {
+			background-color:mix(black, $color, 15%);
+		}
+	}
+	a.btn-#{$label} {
+		background-color:$color;
+    color: $theme-white-color;
+    border-color:mix(black, $color, 15%);
+		&:hover, &:active {
+			background-color:mix(black, $color, 15%);
+		}
+  }
+  .btn-outline-#{$label} {
+    background-color:transparent;
+    background-image: none;
+    color: $color;
+    border-color:$color;
+		&:hover, &:active {
+      background-color:$color;
+      color: $theme-white-color;
+		}
+  }
+  a.btn-outline-#{$label} {
+    background-color:transparent;
+    background-image: none;
+    color: $color;
+    border-color:$color;
+		&:hover, &:active {
+      background-color:$color;
+      color: $theme-white-color;
+		}
+	}
+}
+
+/** Gradient Buttons **/
+@each $label,$color in $gradient-colors-list { 
+  .btn-#{$label } { 
+    background-image:$color;
+    color: $theme-white-color;
+    border-color:mix(white, white, 10%);
+    &:hover, &:active {
+			color: white;
+		}
+  } 
+}
+
+.btn-success{
+  background-image:$gradient-success !important;
+  border-color: transparent;
+  border-image-source: $gradient-success;
+  &:hover, &:active {
+    background-image:$gradient-success !important;
+  }
+}
+
+.btn-warning{
+  background-image:$gradient-warning !important;
+  border-color: transparent;
+  border-image-source: $gradient-warning;
+  &:hover, &:active {
+    background-image:$gradient-warning !important;
+  }
+}
+
+.btn-danger{
+  background-image:$gradient-danger !important;
+  border-color: transparent;
+  border-image-source: $gradient-danger;
+  &:hover, &:active {
+    background-image:$gradient-danger !important;
+  }
+}
+
+.btn-theme-grey{
+  background-image:$gradient-grey !important;
+  border-color: transparent;
+  border-image-source: $gradient-grey;
+  &:hover, &:active {
+    background-image:$gradient-grey !important;
+  }
+}
+
+.badge-warning{
+  background-image:$gradient-warning !important;
+}
+.badge-success{
+  background-image:$gradient-success !important;
+}
+.badge-danger{
+  background-image:$gradient-danger !important;
+}
